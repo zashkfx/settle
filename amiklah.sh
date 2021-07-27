@@ -17,18 +17,12 @@ fi
 mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
 wget -q https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/chknetLlLlLLLLllll/beta/cf.sh && chmod +x cf.sh && ./cf.sh
-#install ssh ovpn
 wget -q https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/chknetLlLlLLLLllll/beta/installer.sh && chmod +x installer.sh && screen -S installer ./installer.sh
-#install ssr
 wget -q https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/chknetLlLlLLLLllll/beta/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
 wget -q https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/chknetLlLlLLLLllll/beta/shadow.sh && chmod +x shadow.sh && screen -S ss ./shadow.sh
-#installwg
 wget -q https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/chknetLlLlLLLLllll/beta/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
-#install v2ray
 wget -q https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/chknetLlLlLLLLllll/beta/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
-#install Br
 wget -q https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/chknetLlLlLLLLllll/beta/set-br.sh && chmod +x set-br.sh && ./set-br.sh
-
 rm -f /root/installer.sh
 rm -f /root/wg.sh
 rm -f /root/ss.sh
