@@ -1,15 +1,13 @@
-#!/bin/bash
-if [ "${EUID}" -ne 0 ]; then
-                echo "You need to run this script as root"
-                exit 1
-fi
-red='\e[1;31m'
-green='\e[0;32m'
-NC='\e[0m'
-MYIP=$(wget -qO- icanhazip.com)
-rm -f amiklah.sh
-exit 0
-fi
+#!/bin/bash 
+
+# initializing var
+export DEBIAN_FRONTEND=noninteractive
+MYIP=$(wget -qO- icanhazip.com);
+MYIP2="s/xxxxxxxxx/$MYIP/g";
+NET=$(ip -o $ANU -4 route show to default | awk '{print $5}');
+source /etc/os-release
+ver=$VERSION_ID
+
 mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
 wget -q https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/chknetLlLlLLLLllll/beta/cf.sh && chmod +x cf.sh && ./cf.sh
