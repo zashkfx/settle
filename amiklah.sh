@@ -1,8 +1,13 @@
+#!/bin/bash
+if [ "${EUID}" -ne 0 ]; then
+                echo "You need to run this script as root"
+                exit 1
+fi
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-if [ -f "/etc/v2ray/domain" ];
-echo "Script Already Installed"
+MYIP=$(wget -qO- icanhazip.com)
+rm -f amiklah.sh
 exit 0
 fi
 mkdir /var/lib/premium-script;
